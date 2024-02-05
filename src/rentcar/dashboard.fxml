@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rentcar.dashboardController">
+   <children>
+      <AnchorPane fx:id="main_form" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <BorderPane layoutX="375.0" layoutY="176.0" prefHeight="600.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <top>
+                  <AnchorPane prefHeight="45.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutX="222.0" layoutY="-77.0" prefHeight="35.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <FontAwesomeIcon glyphName="CAR" layoutX="14.0" layoutY="27.0" size="1.5em" />
+                              <Label layoutX="45.0" layoutY="14.0" text="Diq Rent Car">
+                                 <font>
+                                    <Font name="Arial Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </top>
+               <left>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutX="-31.0" layoutY="78.0" prefHeight="555.0" prefWidth="200.0" style="-fx-background-color: #00fff2;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <FontAwesomeIcon glyphName="USER" layoutX="70.0" layoutY="109.0" size="2cm" />
+                              <Label layoutX="63.0" layoutY="120.0" text="Welcome,">
+                                 <font>
+                                    <Font name="Arial Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="username" alignment="CENTER" layoutX="1.0" layoutY="140.0" prefHeight="23.0" prefWidth="198.0" text="Shidiq">
+                                 <font>
+                                    <Font name="Arial Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <FontAwesomeIcon glyphName="HOME" layoutX="13.0" layoutY="227.0" size="25" />
+                              <Button layoutX="5.0" layoutY="516.0" mnemonicParsing="false" onAction="#logout" prefHeight="25.0" prefWidth="62.0" style="-fx-background-color: #b22828;" />
+                              <FontAwesomeIcon fx:id="logoutBtn" glyphName="SIGN_OUT" layoutX="26.0" layoutY="536.0" size="25" />
+                              <Label layoutX="70.0" layoutY="520.0" text="Sign Out">
+                                 <font>
+                                    <Font name="Arial Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <FontAwesomeIcon glyphName="CHECK" layoutX="13.0" layoutY="260.0" size="20" />
+                              <FontAwesomeIcon glyphName="CAR" layoutX="13.0" layoutY="291.0" size="20" />
+                              <Button fx:id="home_btn" layoutX="38.0" layoutY="205.0" mnemonicParsing="false" onAction="#switchForm" style="-fx-background-color: Transparent;" text="Home">
+                                 <font>
+                                    <Font name="Arial Bold" size="16.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="availableCars_btn" layoutX="38.0" layoutY="239.0" mnemonicParsing="false" onAction="#switchForm" style="-fx-background-color: Transparent;" text="Available Cars">
+                                 <font>
+                                    <Font name="Arial Bold" size="16.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="rentCar_btn" layoutX="38.0" layoutY="270.0" mnemonicParsing="false" onAction="#switchForm" style="-fx-background-color: Transparent;" text="Rent Car">
+                                 <font>
+                                    <Font name="Arial Bold" size="16.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </left>
+               <center>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane fx:id="home_form" layoutX="74.0" layoutY="71.0" prefHeight="558.0" prefWidth="893.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="8.0" prefHeight="205.0" prefWidth="883.0" style="-fx-background-color: White; -fx-background-radius: 8px;">
+                                 <children>
+                                    <AnchorPane layoutX="14.0" layoutY="9.0" prefHeight="149.0" prefWidth="250.0" style="-fx-background-color: #00fff2; -fx-background-radius: 8px;">
+                                       <children>
+                                          <FontAwesomeIcon glyphName="CAR" layoutX="14.0" layoutY="94.0" size="1.5cm" />
+                                          <Button layoutX="79.0" layoutY="102.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="141.0" style="-fx-background-color: Transparent;" text="Available Cars">
+                                             <font>
+                                                <Font name="Arial Bold" size="16.0" />
+                                             </font>
+                                          </Button>
+                                          <Button fx:id="home_availableCars" alignment="TOP_RIGHT" layoutX="109.0" mnemonicParsing="false" onAction="#homeAvailableCars" prefHeight="35.0" prefWidth="141.0" style="-fx-background-color: Transparent;" text="0">
+                                             <font>
+                                                <Font name="Arial Bold" size="18.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="317.0" layoutY="9.0" prefHeight="149.0" prefWidth="250.0" style="-fx-background-color: #00fff2; -fx-background-radius: 8px;">
+                                       <children>
+                                          <FontAwesomeIcon glyphName="MONEY" layoutX="14.0" layoutY="95.0" size="1.5cm" />
+                                          <Button layoutX="79.0" layoutY="103.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="141.0" style="-fx-background-color: Transparent;" text="Total Income">
+                                             <font>
+                                                <Font name="Arial Bold" size="16.0" />
+                                             </font>
+                                          </Button>
+                                          <Button fx:id="home_totalIncome" alignment="TOP_RIGHT" layoutX="109.0" mnemonicParsing="false" onAction="#homeTotalIncome" prefHeight="35.0" prefWidth="141.0" style="-fx-background-color: Transparent;" text="\$0.0">
+                                             <font>
+                                                <Font name="Arial Bold" size="18.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="619.0" layoutY="9.0" prefHeight="149.0" prefWidth="250.0" style="-fx-background-color: #00fff2; -fx-background-radius: 8px;">
+                                       <children>
+                                          <FontAwesomeIcon glyphName="USERS" layoutX="14.0" layoutY="94.0" size="1.5cm" />
+                                          <Button layoutX="79.0" layoutY="102.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="141.0" style="-fx-background-color: Transparent;" text="Total Customer">
+                                             <font>
+                                                <Font name="Arial Bold" size="16.0" />
+                                             </font>
+                                          </Button>
+                                          <Button fx:id="home_totalCustomer" alignment="TOP_RIGHT" layoutX="114.0" mnemonicParsing="false" onAction="#homeTotalCustomer" prefHeight="35.0" prefWidth="141.0" style="-fx-background-color: Transparent;" text="0">
+                                             <font>
+                                                <Font name="Arial Bold" size="18.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="9.0" layoutY="183.0" prefHeight="363.0" prefWidth="883.0" style="-fx-background-color: White; -fx-background-radius: 8px;">
+                                 <children>
+                                    <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="338.0" prefWidth="516.0" style="-fx-background-radius: 8px; -fx-background-color: White;" />
+                                    <AnchorPane layoutX="545.0" layoutY="13.0" prefHeight="338.0" prefWidth="324.0" style="-fx-background-color: White; -fx-background-radius: 8px;" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="84.0" layoutY="81.0" prefHeight="639.0" prefWidth="977.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Label layoutX="218.0" layoutY="302.0" text="Diq Rent Car">
+                                 <font>
+                                    <Font name="Arial Bold" size="79.0" />
+                                 </font>
+                              </Label>
+                           </children></AnchorPane>
+                        <AnchorPane fx:id="availableCars_form" layoutX="14.0" layoutY="14.0" prefHeight="555.0" prefWidth="900.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="8.0" layoutY="7.0" prefHeight="169.0" prefWidth="889.0">
+                                 <children>
+                                    <Label layoutX="15.0" layoutY="14.0" text="Car id">
+                                       <font>
+                                          <Font name="Arial Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="15.0" layoutY="55.0" text="Brand">
+                                       <font>
+                                          <Font name="Arial Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="14.0" layoutY="92.0" text="Model">
+                                       <font>
+                                          <Font name="Arial Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="246.0" layoutY="15.0" text="Price">
+                                       <font>
+                                          <Font name="Arial Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="availableCars_carid" layoutX="65.0" layoutY="11.0" onAction="#rentCarId" />
+                                    <TextField fx:id="availableCars_brand" layoutX="65.0" layoutY="51.0" />
+                                    <TextField fx:id="availableCars_model" layoutX="65.0" layoutY="88.0" />
+                                    <TextField fx:id="availableCars_price" layoutX="296.0" layoutY="11.0" />
+                                    <ComboBox fx:id="availableCars_status" layoutX="65.0" layoutY="123.0" onAction="#availableCarStatusList" prefWidth="150.0" promptText="Choose" />
+                                    <Label layoutX="15.0" layoutY="127.0" text="Status">
+                                       <font>
+                                          <Font name="Arial Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Button fx:id="availableCars_DeleteBtn" layoutX="769.0" layoutY="118.0" mnemonicParsing="false" onAction="#availableCarDelete" prefHeight="35.0" prefWidth="100.0" style="-fx-background-color: #ae2929;" text="Delete" textFill="WHITE" />
+                                    <Button fx:id="availableCars_clearBtn" layoutX="658.0" layoutY="118.0" mnemonicParsing="false" onAction="#availableCarClear" prefHeight="35.0" prefWidth="100.0" style="-fx-background-color: #9a3b8f;" text="Clear" textFill="WHITE" />
+                                    <Button fx:id="availableCars_insertBtn" layoutX="770.0" layoutY="75.0" mnemonicParsing="false" onAction="#availableCarAdd" prefHeight="35.0" prefWidth="100.0" style="-fx-background-color: #3b4283;" text="Insert" textFill="WHITE" />
+                                    <Button fx:id="availableCars_updateBtn" layoutX="659.0" layoutY="75.0" mnemonicParsing="false" onAction="#availableCarUpdate" prefHeight="35.0" prefWidth="100.0" style="-fx-background-color: #448a4a;" text="Update" textFill="WHITE" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="21.0" layoutY="178.0" prefHeight="361.0" prefWidth="860.0">
+                                 <children>
+                                    <TableView fx:id="availableCars_tableView" layoutX="6.0" layoutY="14.0" onMouseClicked="#availableCarSelect" prefHeight="339.0" prefWidth="852.0">
+                                      <columns>
+                                        <TableColumn fx:id="availableCars_col_carid" prefWidth="78.0" text="Car ID" />
+                                        <TableColumn fx:id="availableCars_col_brand" prefWidth="283.0" text="Brand" />
+                                          <TableColumn fx:id="availableCars_col_model" prefWidth="236.0" text="Model" />
+                                          <TableColumn fx:id="availableCars_col_price" prefWidth="149.0" text="Price" />
+                                          <TableColumn fx:id="availableCars_col_status" prefWidth="105.0" text="Status" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="rent_form" layoutX="122.0" layoutY="34.0" prefHeight="555.0" prefWidth="900.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="880.0" style="-fx-background-radius: 8px;">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="14.0" text="Car ID :">
+                                       <font>
+                                          <Font name="Arial" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="15.0" layoutY="48.0" text="Brand :">
+                                       <font>
+                                          <Font name="Arial" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="15.0" layoutY="80.0" text="Model :">
+                                       <font>
+                                          <Font name="Arial" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label contentDisplay="CENTER" layoutX="330.0" layoutY="11.0" text="First Name :">
+                                       <font>
+                                          <Font name="Arial" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label contentDisplay="CENTER" layoutX="331.0" layoutY="48.0" text="Last Name :">
+                                       <font>
+                                          <Font name="Arial" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="rent_carid" layoutX="136.0" layoutY="7.0" onAction="#rentCarId" prefWidth="150.0" promptText="Choose" />
+                                    <ComboBox fx:id="rent_brand" layoutX="136.0" layoutY="41.0" onAction="#rentCarBrand" prefWidth="150.0" promptText="Choose" />
+                                    <ComboBox fx:id="rent_model" layoutX="136.0" layoutY="73.0" onAction="#rentCarModel" prefWidth="150.0" promptText="Choose" />
+                                    <TextField fx:id="rent_firstName" layoutX="461.0" layoutY="7.0" />
+                                    <TextField fx:id="rent_lastName" layoutX="461.0" layoutY="44.0" />
+                                    <Label contentDisplay="CENTER" layoutX="331.0" layoutY="80.0" text="Gender :">
+                                       <font>
+                                          <Font name="Arial" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="rent_gender" layoutX="460.0" layoutY="76.0" onAction="#rentCarGender" prefWidth="150.0" promptText="Choose" />
+                                    <DatePicker fx:id="rent_dateRented" layoutX="112.0" layoutY="112.0" />
+                                    <DatePicker fx:id="rent_dateReturn" layoutX="436.0" layoutY="112.0" onAction="#rentDisplayTotal" />
+                                    <Label layoutX="14.0" layoutY="116.0" text="Date Rented">
+                                       <font>
+                                          <Font name="Arial" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="331.0" layoutY="116.0" text="Date Returned">
+                                       <font>
+                                          <Font name="Arial" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="649.0" layoutY="11.0" text="Total :">
+                                       <font>
+                                          <Font name="Arial" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="rent_total" layoutX="716.0" layoutY="11.0" prefHeight="17.0" prefWidth="150.0" text="\$0.0">
+                                       <font>
+                                          <Font name="Arial" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="649.0" layoutY="45.0" text="Amount :">
+                                       <font>
+                                          <Font name="Arial" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Button fx:id="rentBtn" layoutX="784.0" layoutY="110.0" mnemonicParsing="false" onAction="#rentPay" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: #624dae;" text="Rent" textFill="WHITE" />
+                                    <TextField fx:id="rent_amount" layoutX="717.0" layoutY="41.0" onAction="#rentAmount" />
+                                    <Label layoutX="649.0" layoutY="77.0" text="Balance :">
+                                       <font>
+                                          <Font name="Arial" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="rent_balance" layoutX="717.0" layoutY="77.0" prefHeight="17.0" prefWidth="150.0" text="\$0.0">
+                                       <font>
+                                          <Font name="Arial" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="24.0" layoutY="182.0" prefHeight="353.0" prefWidth="852.0" style="-fx-background-radius: 8px;">
+                                 <children>
+                                    <TableView fx:id="rent_tableView" layoutY="49.0" prefHeight="305.0" prefWidth="854.0">
+                                      <columns>
+                                        <TableColumn fx:id="rent_col_carid" prefWidth="96.0" text="Car ID" />
+                                        <TableColumn fx:id="rent_col_brand" prefWidth="255.0" text="Brand" />
+                                          <TableColumn fx:id="rent_col_model" prefWidth="230.0" text="Model" />
+                                          <TableColumn fx:id="rent_col_price" prefWidth="151.0" text="Price" />
+                                          <TableColumn fx:id="rent_col_status" prefWidth="121.0" text="Status" />
+                                      </columns>
+                                    </TableView>
+                                    <Label layoutX="351.0" layoutY="14.0" text="Available Car">
+                                       <font>
+                                          <Font name="Arial Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
